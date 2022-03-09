@@ -12,6 +12,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
+  background-color: rgb(255, 255, 255);
 }
 
 .form-container {
@@ -25,10 +26,8 @@ body {
 }
 
 .logo {
-  width: 150px;
-  margin-bottom: 50px;
+  width: 100px;
   justify-self: center;
-  display: none;
 }
 
 .title {
@@ -130,10 +129,22 @@ body {
 }
 
 .secondary-button {
-  background-color: var(--white);
+  background-color: transparent;
   border-radius: 8px;
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 45px;
+}
+
+.warning-button {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid rgb(241, 122, 122);
+  color: rgb(241, 122, 122);
   width: 100%;
   cursor: pointer;
   font-size: var(--md);
@@ -165,4 +176,16 @@ body {
   color: var(--very-light-pink);
   font-size: var(--md);
   margin: 8px 0 32px 0;
+}
+
+.primary-button {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 45px;
 }
