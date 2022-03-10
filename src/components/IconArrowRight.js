@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowIcon from '../assets/flechita.svg';
+import ArrowIcon from '@icons/flechita.svg';
 
 const IconArrowRight = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/NotFound.scss';
-import img from '../assets/404_error.svg';
+import img from '@images/404_error.svg';
+import '@styles/NotFound.scss';
 
 const NotFound = () => {
   return (

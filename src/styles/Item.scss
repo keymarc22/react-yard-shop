@@ -7,11 +7,8 @@
 }
 
 .product-card img {
-  width: 240px;
-}
-
-.product-card img {
   height: 240px;
+  width: 240px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -52,9 +49,6 @@
 
   .product-card img {
     width: 140px;
-  }
-
-  .product-card img {
     height: 140px;
   }
 }

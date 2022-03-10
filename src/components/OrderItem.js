@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemImg from '../assets/bicicleta.jpeg';
-import '../styles/OrderItem.scss';
+import ItemImg from '@images/bicicleta.jpeg';
+import '@styles/OrderItem.scss';
 
 const OrderItem = () => {
   return (

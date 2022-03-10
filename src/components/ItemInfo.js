@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemImg from '../assets/bicicleta.jpeg';
-import IconAddToCard from '../components/IconAddToCard';
+import ItemImg from '@images/bicicleta.jpeg';
+import IconAddToCard from '@components/IconAddToCard';
 
 const ItemInfo = () => {
   return (

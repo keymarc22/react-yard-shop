@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Item.scss';
-import addItemImg from '../assets/bt_add_to_cart.svg';
-import itemImg from '../assets/bicicleta.jpeg';
+import { IconAddToCard } from '@components/IconAddToCard';
+import itemImg from '@images/bicicleta.jpeg';
+import '@styles/Item.scss';
 
 const Item = () => {
   return(
@@ -13,7 +13,7 @@ const Item = () => {
           <p>Bike</p>
         </div>
         <figure>
-          <img src={addItemImg} alt="addItem" className='addItem' />
+          <IconAddToCard />
         </figure>
       </div>
     </div>

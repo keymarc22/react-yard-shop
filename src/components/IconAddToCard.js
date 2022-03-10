@@ -1,10 +1,10 @@
 import React from 'react';
-import img from '../assets/bt_add_to_cart.svg';
+import img from '@icons/bt_add_to_cart.svg';
 
-const AddToCard = () => {
+const IconAddToCard = () => {
   return (
     <img src={img} alt="add-to-card" className="add-to-card" />
   )
 }
 
-export { AddToCard };
+export { IconAddToCard };

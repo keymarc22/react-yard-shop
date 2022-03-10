@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/MenuMobile.scss';
+import '@styles/MenuMobile.scss';
 
 const MenuMobile = () => {
   return (
-    <div class="mobile-menu">
+    <div className="mobile-menu">
       <div>
         <ul>
           <li>
@@ -59,8 +59,8 @@ const MenuMobile = () => {
       </div>
       <div>
         <ul>
-          <li><a href="/" class="email">cloraltkeymar22@gmail.com</a></li>
-          <li><a href="/" class="signout">Sign out</a></li>
+          <li><a href="/" className="email">cloraltkeymar22@gmail.com</a></li>
+          <li><a href="/" className="signout">Sign out</a></li>
         </ul>
       </div>
     </div>

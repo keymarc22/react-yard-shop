@@ -1,7 +1,7 @@
 import React from 'react';
-import { OrderItem } from '../components/OrderItem';
-import { TotalOrderDetail } from '../components/TotalOrderDetail';
-import '../styles/Order.scss';
+import { OrderItem } from '@components/OrderItem';
+import { TotalOrderDetail } from '@components/TotalOrderDetail';
+import '@styles/Order.scss';
 
 const Order = () => {
   return (

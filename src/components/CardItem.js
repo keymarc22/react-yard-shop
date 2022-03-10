@@ -1,7 +1,7 @@
 import React from 'react';
-import ItemImg from '../assets/bicicleta.jpeg';
-import IconClose from '../components/IconClose';
-import '../styles/CardItem.scss';
+import IconClose from '@components/IconClose';
+import ItemImg from '@images/bicicleta.jpeg';
+import '@styles/CardItem.scss';
 
 const CardItem = () => {
   return (

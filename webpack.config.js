@@ -11,7 +11,16 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+      '@images': path.resolve(__dirname, 'src/assets/images/'),
+      '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+    }
   },
   module: {
     rules: [
@@ -39,8 +48,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-        loader: "file-loader"
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        type: 'asset'
       }
     ]
   },

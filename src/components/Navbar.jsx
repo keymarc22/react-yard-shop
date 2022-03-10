@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/Navbar.scss';
-import imgCard from '../assets/icon_shopping_cart.svg';
-import imgMenu from '../assets/icon_menu.svg';
-import logo from '../assets/logo_yard_sale.svg';
+import { Logo } from '@components/Logo';
+import imgCard from '@icons/icon_shopping_cart.svg';
+import imgMenu from '@icons/icon_menu.svg';
+import '@styles/Navbar.scss';
 
 const Navbar = () => {
   return (
@@ -10,11 +10,7 @@ const Navbar = () => {
       <img src={imgMenu} alt="menu" className="menu" />
 
       <div className="navbar-left">
-        <img
-          src={logo}
-          alt="logo"
-          className="logo"
-        />
+        <Logo />
         <ul>
           <li>
             <a href="/">All</a>

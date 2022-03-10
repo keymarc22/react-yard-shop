@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navbar } from '../components/Navbar';
-import { Item } from '../components/Item';
+import { Navbar } from '@components/Navbar';
+import { Item } from '@components/Item';
 
 let items = [
   {
@@ -119,8 +119,8 @@ const Home = () => {
 			<Navbar />
 			<section className="main-container">
 				<div className="cards-container">
-					{items.map(item => (
-						<Item price={item.price} name={item.name} />
+					{items.map((item, index) => (
+						<Item price={item.price} name={item.name} key={index} />
 					))}
 				</div>
 			</section>
@@ -128,4 +128,4 @@ const Home = () => {
 	);
 }
 
-export default Home;
+export { Home };

@@ -1,13 +1,14 @@
 import React from 'react';
-import '../styles/Login.scss'
-import logo from '../assets/logo_yard_sale.svg';
-import email from '../assets/email.svg';
+import { Logo } from '@components/Logo';
+import '@styles/Login.scss'
+
+const email = '@icons/email.svg';
 
 const SentEmail = () => {
   return (
     <div className="login">
       <div className="form-container">
-        <img src={logo} alt="logo" className="logo"/>
+        <Logo />
         <h1 className="title">Email has been sent</h1>
         <p className="subtitle">PLease check your inbox for instruccions on how to reset the password</p>
 
