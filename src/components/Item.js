@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IconAddToCard } from '@components/IconAddToCard';
-import itemImg from '@images/bicicleta.jpeg';
 import '@styles/Item.scss';
 
-const Item = () => {
+const Item = (props) => {
+  const [card, setCard] = useState([]);
+
+  const handleCard = () => {
+    setCard([]);
+  }
+
   return(
-    <div class="product-card">
-      <img src={itemImg} alt="item-image" class="product-img" />
+    <div className="product-card">
+      <img src={props.image} alt="item-image" className="product-img" />
       <div className="product-info">
         <div>
-          <p>$120.00</p>
-          <p>Bike</p>
+          <p>${props.price}</p>
+          <p>{props.title}</p>
         </div>
-        <figure>
+        <figure onClick={handleCard} >
           <IconAddToCard />
         </figure>
       </div>

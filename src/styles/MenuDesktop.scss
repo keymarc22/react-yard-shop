@@ -1,9 +1,13 @@
 .desktop-menu {
+  position: absolute;
   width: 100px;
+  top: 150%;
+  right: 0%;
   height: auto;
   border: 1px solid var(--very-light-pink);
   border-radius: 6px;
   padding: 20px 20px 0 20px;
+  background-color: white;
 }
 
 .desktop-menu ul {
@@ -15,6 +19,13 @@
 
 .desktop-menu ul li {
   text-align: end;
+}
+
+.desktop-menu ul li:hover {
+  a {
+    color: var(--hospital-green);
+    font-weight: 700;
+  }
 }
 
 .desktop-menu ul li:nth-child(1), .desktop-menu ul li:nth-child(2) {

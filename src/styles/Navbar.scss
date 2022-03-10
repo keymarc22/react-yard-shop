@@ -9,7 +9,7 @@ nav {
   display: none;
 }
 
-.navbar-left ul, .navbar-right ul {
+.navbar-left ul, .navbar-right > ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -26,7 +26,13 @@ nav {
   margin-left: 12px;
 }
 
-.navbar-left ul li a, .navbar-right ul li a {
+.navbar-right > ul > li {
+  position:relative;
+  float: left;
+  cursor: pointer;
+}
+
+.navbar-left ul li a, .navbar-right > ul > li > a {
   text-decoration: none;
   color: var(--very-light-pink);
   border: 1px solid var(--white);
@@ -34,7 +40,7 @@ nav {
   padding: 8px;
 }
 
-.navbar-left ul li a:hover, .navbar-right ul li a:hover {
+.navbar-left ul li a:hover, .navbar-right > ul > li > a:hover {
   color: var(--hospital-green);
   border: 1px solid var(--hospital-green);
 }

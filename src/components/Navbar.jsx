@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Logo } from '@components/Logo';
-import imgCard from '@icons/icon_shopping_cart.svg';
-import imgMenu from '@icons/icon_menu.svg';
+import { MenuDesktop } from '@components/MenuDesktop';
 import '@styles/Navbar.scss';
 
+import imgCard from '@icons/icon_shopping_cart.svg';
+import imgMenu from '@icons/icon_menu.svg';
+
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  }
+
   return (
     <nav className='navbar'>
       <img src={imgMenu} alt="menu" className="menu" />
@@ -32,7 +40,10 @@ const Navbar = () => {
 
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">cloraltkeymar22@gmail.com</li>
+          <li className="navbar-email" onClick={handleToggle}>
+            cloraltkeymar22@gmail.com
+            {toggle && <MenuDesktop />}
+          </li>
           <li className="navbar-shopping-card">
             <img
               src={imgCard}
@@ -43,6 +54,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
     </nav>
   );
 }
