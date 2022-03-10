@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IconAddToCard } from '@components/IconAddToCard';
 import '@styles/Item.scss';
 
-const Item = (props) => {
+const Item = ({ product }) => {
   const [card, setCard] = useState([]);
 
   const handleCard = () => {
@@ -11,11 +11,11 @@ const Item = (props) => {
 
   return(
     <div className="product-card">
-      <img src={props.image} alt="item-image" className="product-img" />
+      <img src={product.images[0]} alt={product.title} className="product-img" />
       <div className="product-info">
         <div>
-          <p>${props.price}</p>
-          <p>{props.title}</p>
+          <p>${product.price}</p>
+          <p>{product.title}</p>
         </div>
         <figure onClick={handleCard} >
           <IconAddToCard />
