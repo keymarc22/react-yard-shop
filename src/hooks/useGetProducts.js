@@ -6,7 +6,12 @@ const useGetProducts = (API) => {
 
   useEffect(async () => {
     const response = await axios(API);
-    setProducts(response.data);
+
+    function onlyUnique(value, index, self) {
+      return self.indexOf(value) === index;
+    }
+
+    setProducts(response.data.filter(onlyUnique));
   }, []);
 
   return products;

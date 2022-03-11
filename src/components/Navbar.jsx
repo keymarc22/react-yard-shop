@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Logo } from '@components/Logo';
 import { MenuDesktop } from '@components/MenuDesktop';
+import { MenuIcon, CardIcon } from '@components/Icons';
+import { CardDetails } from '@containers/CardDetails';
+import { AppContext } from '@context/AppContext';
+
 import '@styles/Navbar.scss';
 
-import imgCard from '@icons/icon_shopping_cart.svg';
-import imgMenu from '@icons/icon_menu.svg';
-
 const Navbar = () => {
+  const { state } = useContext(AppContext);
+  const [toggleOrder, setToggleOrder] = useState(false);
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -15,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <img src={imgMenu} alt="menu" className="menu" />
+      <MenuIcon />
 
       <div className="navbar-left">
         <Logo />
@@ -44,17 +47,16 @@ const Navbar = () => {
             cloraltkeymar22@gmail.com
             {toggle && <MenuDesktop />}
           </li>
-          <li className="navbar-shopping-card">
-            <img
-              src={imgCard}
-              alt="shopping-card"
-              className="shopping-card"
-            />
-            <div>2</div>
+          <li
+            className="navbar-shopping-card"
+            onClick={()=> {setToggleOrder(!toggleOrder)}}
+          >
+            <CardIcon />
+            {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
-
+      {toggleOrder && <CardDetails />}
     </nav>
   );
 }

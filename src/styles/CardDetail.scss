@@ -1,9 +1,14 @@
 .product-detail {
-  width: 360px;
-  padding: 24px;
-  box-sizing: border-box;
   position: absolute;
   right: 0;
+  top: 60px;
+  width: 360px;
+  bottom: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid var(--very-light-pink);
 }
 
 .my-order-content {

@@ -1,5 +1,5 @@
 import React from 'react';
-import IconClose from '@components/IconClose';
+import IconClose from '@components/Icons';
 import ItemInfo from '@components/ItemInfo';
 import '@styles/ItemDetail.scss';
 

@@ -1,17 +1,19 @@
-import React from 'react';
-import IconClose from '@components/IconClose';
-import ItemImg from '@images/bicicleta.jpeg';
+import React, { useContext } from 'react';
+import { IconClose } from '@components/Icons';
+import { AppContext } from '@context/AppContext';
 import '@styles/CardItem.scss';
 
-const CardItem = () => {
+const CardItem = ({product}) => {
+  const { removeFromCart } = useContext(AppContext);
   return (
-    <div class="shopping-card">
+    <div className="shopping-card">
       <figure>
-        <img src={ItemImg} alt="bike" />
+        <img src={product.images[0]} alt={product.title} />
       </figure>
-      <p>Bike</p>
-      <p>$30</p>
-      <IconClose />
+      <p>{product.title}</p>
+      <p>${product.price}</p>
+
+      <IconClose action={() => removeFromCart(product)}/>
     </div>
   )
 }

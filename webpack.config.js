@@ -21,6 +21,7 @@ module.exports = {
       '@logos': path.resolve(__dirname, 'src/assets/logos/'),
       '@styles': path.resolve(__dirname, 'src/styles/'),
       '@hooks': path.resolve(__dirname, 'src/hooks/'),
+      '@context': path.resolve(__dirname, 'src/context/'),
     }
   },
   module: {

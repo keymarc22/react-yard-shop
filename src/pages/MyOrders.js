@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconArrowRight } from '@components/IconArrowRight';
+import { IconArrowRight } from '@components/Icons';
 import { TotalOrderDetail } from '@components/TotalOrderDetail';
 import '@styles/MyOrders.scss';
 
