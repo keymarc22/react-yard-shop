@@ -1,12 +1,15 @@
 {
   "name": "react-shop",
   "version": "1.0.0",
+  "homepage": "https://keymarc22.github.io/react-yard-shop",
   "description": "react e-shop",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "react",
@@ -32,6 +35,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.5.1",
+    "gh-pages": "^3.2.3",
     "mini-css-extract-plugin": "^2.5.3",
     "react-svg-loader": "^3.0.3",
     "sass": "^1.49.0",
